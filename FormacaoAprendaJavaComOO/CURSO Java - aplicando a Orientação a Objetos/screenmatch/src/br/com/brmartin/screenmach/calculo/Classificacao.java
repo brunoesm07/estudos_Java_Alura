@@ -1,5 +1,5 @@
 package br.com.brmartin.screenmach.calculo;
 
-public class Classificacao {
-    
+public interface Classificacao {
+    int getClassificacao();
 }

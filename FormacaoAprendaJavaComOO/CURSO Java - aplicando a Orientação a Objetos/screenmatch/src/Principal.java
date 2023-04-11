@@ -1,3 +1,5 @@
+import br.com.brmartin.screenmach.calculo.FiltroDeRecomendacao;
+import br.com.brmartin.screenmach.modelos.Episodios;
 import br.com.brmartin.screenmach.modelos.Filme;
 import br.com.brmartin.screenmach.modelos.Serie;
 
@@ -28,5 +30,14 @@ public class Principal {
         serieUm.setEpisodiosPorTemporada(10);
         serieUm.setMinutosPorEpisodio(50);
         System.out.println("Tempo para maratonar esta série: " + serieUm.getDuracaoEmMinutos() + " minutos");
+
+        FiltroDeRecomendacao filtro = new FiltroDeRecomendacao();
+        filtro.filtra(filmeUm);
+
+        Episodios episodio = new Episodios();
+        episodio.setNumero(1);
+        episodio.setSerie(serieUm);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
     }
 }
